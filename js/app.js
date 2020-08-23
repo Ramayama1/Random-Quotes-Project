@@ -10,5 +10,7 @@ function randomQuote(response) {
 function quoteTime() {
   axios.get(apiUrl).then(randomQuote);
 }
-quoteTime();
+window.addEventListener("load", (event) => {
+  quoteTime();
+});
 document.querySelector("#generate-btn").addEventListener("click", quoteTime);
